@@ -11,32 +11,33 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   async rewrites() {
-    console.log(WEB_URL);
-    console.log(DOCS_URL);
     return [
+      // WEB zone
       {
         source: "/web",
         destination: `${WEB_URL}/web`,
       },
       {
-        source: "/web/:path+",
-        destination: `${WEB_URL}/web/:path+`,
+        source: "/web/:path*",
+        destination: `${WEB_URL}/web/:path*`,
       },
       {
-        source: "/web-static/_next/:path+",
-        destination: `${WEB_URL}/web-static/_next/:path+`,
+        source: "/_next/static/:path*",
+        destination: `${WEB_URL}/_next/static/:path*`,
       },
+
+      // DOCS zone
       {
         source: "/docs",
         destination: `${DOCS_URL}/docs`,
       },
       {
-        source: "/docs/:path+",
-        destination: `${DOCS_URL}/docs/:path+`,
+        source: "/docs/:path*",
+        destination: `${DOCS_URL}/docs/:path*`,
       },
       {
-        source: "/docs-static/_next/:path+",
-        destination: `${DOCS_URL}/docs-static/_next/:path+`,
+        source: "/_next/static/:path*",
+        destination: `${DOCS_URL}/_next/static/:path*`,
       },
     ];
   },
