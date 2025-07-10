@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  assetPrefix: "/web-static",
 };
 
 export default nextConfig;
