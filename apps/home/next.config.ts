@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   async rewrites() {
+    console.log(WEB_URL);
+    console.log(DOCS_URL);
     return [
       {
         source: "/web",
