@@ -19,11 +19,11 @@ const nextConfig: NextConfig = {
       // WEB zone
       {
         source: "/web",
-        destination: `${WEB_BASE}/web`,
+        destination: `${WEB_BASE}/`,
       },
       {
         source: "/web/:path*",
-        destination: `${WEB_BASE}/web/:path*`,
+        destination: `${WEB_BASE}/:path*`,
       },
       {
         source: "/_next/static/:path*",
@@ -33,11 +33,11 @@ const nextConfig: NextConfig = {
       // DOCS zone
       {
         source: "/docs",
-        destination: `${DOCS_BASE}/docs`,
+        destination: `${DOCS_BASE}/`,
       },
       {
         source: "/docs/:path*",
-        destination: `${DOCS_BASE}/docs/:path*`,
+        destination: `${DOCS_BASE}/:path*`,
       },
       {
         source: "/_next/static/:path*",
